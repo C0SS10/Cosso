@@ -1,0 +1,15 @@
+export default function Moon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 12 12"
+    >
+      <path
+        fill="#1B1B1B"
+        d="M2 8a5 5 0 0 0 4.6-6.964a5 5 0 1 1-5.2 6.929Q1.697 8 2 8"
+      />
+    </svg>
+  );
+}
