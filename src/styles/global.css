@@ -3,8 +3,8 @@
 [data-theme="light"] {
   --color-light: #FFFDD0;
   --color-dark: #1B1B1B;
-  --shadow-neumorph-value: 4px 4px 8px #F5E900, -4px -4px 8px #FCFCED;
-  --shadow-inset-value: inset 4px 4px 8px #FCFCED, inset -4px -4px 8px #F5E900;
+  --shadow-neumorph-value: 4px 4px 8px #716C00, -4px -4px 8px #FCFCED;
+  --shadow-inset-value: inset 4px 4px 8px #FCFCED, inset -4px -4px 8px #716C00;
   color: var(--color-dark);
   background-color: var(--color-light);
 }
@@ -22,14 +22,14 @@
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/Quicksand-Regular.otf") format("opentype");
+  src: url("/fonts/Quicksand_Book.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 600;
-  src: url("/fonts/Quicksand-Bold.otf") format("opentype");
+  src: url("/fonts/Quicksand_Bold.otf") format("opentype");
 }
 
 @font-face {
