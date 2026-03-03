@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+[data-theme="light"] {
+  --color-light: #FFFDD0;
+  --color-dark: #1B1B1B;
+  --shadow-neumorph-value: 4px 4px 8px #F5E900, -4px -4px 8px #FCFCED;
+  --shadow-inset-value: inset 4px 4px 8px #FCFCED, inset -4px -4px 8px #F5E900;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+[data-theme="dark"] {
+  --color-light: #FFFDD0;
+  --color-dark: #1B1B1B;
+  --shadow-neumorph-value: 4px 4px 8px #0D0D0D, -4px -4px 8px #525252;
+  --shadow-inset-value: inset 4px 4px 8px #525252, inset -4px -4px 8px #0D0D0D;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Quicksand-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/Quicksand-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Goudy";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Goudy.otf") format("opentype");
+}
+
+@theme {
+  --font-heading: "Goudy", serif;
+  --font-body: "Quicksand", sans-serif;
+  --shadow-neumorph: var(--shadow-neumorph-value);
+  --shadow-neumorph-inset: var(--shadow-inset-value);
+}
