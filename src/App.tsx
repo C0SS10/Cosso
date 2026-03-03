@@ -1,14 +1,12 @@
-import ThemeToggle from "@components/ThemeToggle"
-import NeumorphCard from "@components/NeumorphCard"
+import ThemeToggle from "@components/ui/ThemeToggle"
+import About from "@components/sections/About"
 
 function App() {
 
   return (
-    <main className="grid grid-cols-3 gap-4 justify-items-center min-h-screen px-2 py-8">
+    <main className="grid grid-cols-3 grid-rows-3 gap-4 justify-items-center min-h-screen px-32 py-8 transition-colors duration-300 ease-linear">
       <ThemeToggle />
-      <NeumorphCard>
-        <h1 className="text-2xl font-heading">👋 Esteban Cossio</h1>
-      </NeumorphCard>
+      <About />
     </main>
   )
 }
