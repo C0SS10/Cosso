@@ -3,8 +3,8 @@
 [data-theme="light"] {
   --color-light: #FFFDD0;
   --color-dark: #1B1B1B;
-  --shadow-neumorph-value: 4px 4px 8px #716C00, -4px -4px 8px #FCFCED;
-  --shadow-inset-value: inset 4px 4px 8px #FCFCED, inset -4px -4px 8px #716C00;
+  --shadow-neumorph-value: 16px 16px 32px #d9d7b1, -16px -16px 32px #ffffef;
+  --shadow-inset-value: inset 16px 16px 32px #ffffef, inset -16px -16px 32px #d9d7b1;
   color: var(--color-dark);
   background-color: var(--color-light);
 }
@@ -12,8 +12,8 @@
 [data-theme="dark"] {
   --color-light: #FFFDD0;
   --color-dark: #1B1B1B;
-  --shadow-neumorph-value: 4px 4px 8px #0D0D0D, -4px -4px 8px #525252;
-  --shadow-inset-value: inset 4px 4px 8px #525252, inset -4px -4px 8px #0D0D0D;
+  --shadow-neumorph-value: 16px 16px 32px #0D0D0D, -16px -16px 32px #171717;
+  --shadow-inset-value: inset 16px 16px 32px #171717, inset -16px -16px 32px #0D0D0D;
   color: var(--color-light);
   background-color: var(--color-dark);
 }
