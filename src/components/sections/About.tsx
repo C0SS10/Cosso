@@ -3,19 +3,31 @@ import { GitHub } from '@/assets/icons/GitHub'
 import { LinkedIn } from '@/assets/icons/LinkedIn'
 import NeumorphCard from '@components/ui/NeumorphCard'
 
+
 export default function About() {
-  const socials: Record<string, { href: string; icon: React.ReactNode }> = {
+  interface SocialsProps {
+    href: string
+    icon: React.ReactNode
+    popup: string
+  }
+
+  type SocialKeys = 'linkedin' | 'email' | 'github'
+
+  const socials: Record<SocialKeys, SocialsProps> = {
     linkedin: {
       href: "https://www.linkedin.com/in/esteban-cg/",
-      icon: <LinkedIn />
+      icon: <LinkedIn />,
+      popup: "Visitar LinkedIn"
     },
     email: {
       href: "mailto:esteban.codev@gmail.com",
-      icon: <Email />
+      icon: <Email />,
+      popup: "Enviar correo electrónico"
     },
     github: {
       href: "https://www.github.com/C0SS10",
-      icon: <GitHub />
+      icon: <GitHub />,
+      popup: "Visitar GitHub"
     }
   }
 
@@ -30,9 +42,12 @@ export default function About() {
         <p className="text-lg font-body text-center cursor-default">Desarrollador full-stack con experiencia en tecnologías web modernas.</p>
         <hr />
         <div className='flex justify-center items-center gap-4 shadow-neumorph p-2 rounded-full'>
-          {Object.entries(socials).map(([key, { href, icon }]) => (
-            <a key={key} href={href} target="_blank" rel="noopener noreferrer" className="shadow-neumorph-inset p-2 rounded-full hover:-translate-y-0.5 transition-transform duration-200">
+          {Object.entries(socials).map(([key, { href, icon, popup }]) => (
+            <a key={key} href={href} target="_blank" rel="noopener noreferrer" className="relative group shadow-neumorph-inset p-2 rounded-full hover:-translate-y-0.5 transition-transform duration-200">
               {icon}
+              <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-0.5 font-body font-semibold text-sm rounded-lg px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-initial pointer-events-none whitespace-nowrap shadow-neumorph-inset">
+                {popup}
+              </div>
             </a>
           ))}
         </div>
