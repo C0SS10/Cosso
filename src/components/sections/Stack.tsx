@@ -52,14 +52,14 @@ export default function Stack() {
               <div className="relative w-full h-full transition-transform duration-500 transform-3d group-hover:transform-[rotateY(180deg)]">
                 <p className="absolute inset-0 flex flex-col items-center justify-center gap-2 rounded-xl shadow-neumorph bg-neumorph-gradient backface-hidden">
                   {category.emote}
-                  <span className="text-lg font-heading text-center">{category.label}</span>
+                  <span className="text-lg font-heading text-center font-bold">{category.label}</span>
                 </p>
 
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 rounded-xl shadow-neumorph-inset bg-neumorph-gradient backface-hidden transform-[rotateY(180deg)]">
                   {category.technologies.map((tech) => (
                     <p key={tech.name} className="flex items-center gap-0.5">
                       {tech.icon}
-                      <span className="text-xs font-body font-semibold">{tech.name}</span>
+                      <span className="text-xs font-body">{tech.name}</span>
                     </p>
                   ))}
                 </div>
