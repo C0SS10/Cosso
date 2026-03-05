@@ -1,6 +1,7 @@
 import ThemeToggle from "@components/ui/ThemeToggle"
 import About from "@components/sections/About"
 import Experience from "@components/sections/Experience"
+import Stack from "@components/sections/Stack"
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
       <ThemeToggle />
       <About />
       <Experience />
+      <Stack />
     </main>
   )
 }
