@@ -30,7 +30,7 @@ export default function Experience() {
       company: "PlaceToPay - Evertec",
       role: "QA Student",
       duration: "2024/06 - 2024/08",
-      description: "En la pasantía gestioné la estructuración de pruebas no funcionales para la pasarela de pagos de PlaceToPay usando JMeter. Estas pruebas se realizan con el fin de garantizar la calidad del software y la mejorar la experiencia del usuario.",
+      description: "En la pasantía gestioné la estructuración de pruebas no funcionales para la pasarela de pagos de PlaceToPay usando JMeter. Las pruebas se realizaron con el fin de garantizar la calidad del software y mejorar la experiencia del usuario.",
       technologies: [<JMeter size={16} />, <ClickUp size={16} />],
       icon: <Performance size={18} />
     }
@@ -39,7 +39,7 @@ export default function Experience() {
     <section className="h-full row-span-2">
       <NeumorphCard variant="inset">
         {experiences.map((expItem, index) => (
-          <article key={index} className="flex flex-col gap-2 shadow-neumorph rounded-lg p-2 w-full scroll-smooth">
+          <article key={index} className="flex flex-col gap-2 shadow-neumorph bg-neumorph-gradient rounded-lg p-2 w-full scroll-smooth">
             <h3 className="text-xl font-heading font-semibold flex justify-between items-center gap-4"><span>{expItem.company}</span> <span>{expItem.icon}</span></h3>
             <p className="flex gap-2 text-xs font-body justify-between">
               <span>{expItem.role}</span>
