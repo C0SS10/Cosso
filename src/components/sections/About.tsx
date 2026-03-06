@@ -36,7 +36,7 @@ export default function About() {
       <NeumorphCard>
         <article className='flex flex-col items-center justify-center gap-4 h-full w-full'>
           <figure className="rounded-full shadow-neumorph w-52 h-52 text-center overflow-hidden">
-            <img src="/me.webp" alt="Profile picture of Esteban" className="object-cover w-full h-full" />
+            <img src="me.webp" alt="Profile picture of Esteban" className="object-cover w-full h-full" />
           </figure>
           <h1 className="text-4xl font-heading cursor-default">Esteban Cossio</h1>
           <h2 className='text-2xl font-heading cursor-default'>Ingeniero de Sistemas</h2>
