@@ -2,6 +2,7 @@ import ThemeToggle from "@components/ui/ThemeToggle"
 import About from "@components/sections/About"
 import Experience from "@components/sections/Experience"
 import Stack from "@components/sections/Stack"
+import Projects from "@components/sections/Projects"
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <About />
       <Experience />
       <Stack />
+      <Projects />
     </main>
   )
 }
