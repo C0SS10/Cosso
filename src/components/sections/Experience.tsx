@@ -10,7 +10,8 @@ import NeumorphCard from "@components/ui/NeumorphCard";
 interface ExperienceItem {
   company: string
   role: string
-  duration: string
+  dateStart: string
+  dateEnd?: string
   description: string
   technologies: React.ReactNode[]
   icon: React.ReactNode
@@ -21,7 +22,8 @@ export default function Experience() {
     {
       company: "ImpactU - Colav",
       role: "Desarrollador Backend",
-      duration: "2025/10 - 2026/02",
+      dateStart: "2025/10",
+      dateEnd: "2026/02",
       description: "Optimicé y expandí funcionalmente la plataforma ImpactU de tipo CRIS. Logré reducir tiempos de respuesta en filtros mediante la denormalización de una base de datos MongoDB. Desarrollo una librería de Python llamado HanaPacha para automatizar la converción de dumps de OracleSQL a MongoDB.",
       technologies: [<Python size={16} />, <MongoDB size={16} />, <Docker size={16} />],
       icon: <OpenBook size={18} />
@@ -29,26 +31,30 @@ export default function Experience() {
     {
       company: "PlaceToPay - Evertec",
       role: "QA Student",
-      duration: "2024/06 - 2024/08",
+      dateStart: "2024/06",
+      dateEnd: "2024/08",
       description: "En la pasantía gestioné la estructuración de pruebas no funcionales para la pasarela de pagos de PlaceToPay usando JMeter. Las pruebas se realizaron con el fin de garantizar la calidad del software y mejorar la experiencia del usuario.",
       technologies: [<JMeter size={16} />, <ClickUp size={16} />],
       icon: <Performance size={18} />
     }
   ]
   return (
-    <section className="h-full row-span-2 cursor-default">
+    <section className="h-full row-span-2 cursor-default" aria-label="Experiencia laboral">
       <NeumorphCard variant="inset">
         {experiences.map((expItem, index) => (
           <article key={index} className="flex flex-col gap-2 shadow-neumorph bg-neumorph-gradient rounded-lg p-2 w-full scroll-smooth">
-            <h3 className="text-xl font-heading font-semibold flex justify-between items-center gap-4"><span>{expItem.company}</span> <span>{expItem.icon}</span></h3>
+            <header className="flex justify-between items-center gap-4">
+              <h3 className="text-xl font-heading font-semibold">{expItem.company}</h3>
+              <span aria-hidden="true">{expItem.icon}</span>
+            </header>
             <p className="flex gap-2 text-xs font-body justify-between">
               <span>{expItem.role}</span>
-              <span>{expItem.duration}</span>
+              <time dateTime={`${expItem.dateStart}/${expItem.dateEnd}`}>{expItem.dateStart} - {expItem.dateEnd}</time>
             </p>
             <p className="text-sm font-body">
               {expItem.description}
             </p>
-            <ul className="flex gap-2 text-xs font-body justify-end">
+            <ul className="flex gap-2 text-xs font-body justify-end" aria-label="Tecnologías">
               {expItem.technologies.map((tech, idx) => (
                 <li key={idx} className="shadow-neumorph-inset rounded-full p-1">{tech}</li>
               ))}
