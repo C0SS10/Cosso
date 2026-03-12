@@ -28,3 +28,6 @@ dist-ssr
 
 # pnpm
 .pnpm-store/
+
+#vitest
+coverage/
