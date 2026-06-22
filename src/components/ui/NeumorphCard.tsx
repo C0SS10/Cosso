@@ -1,9 +1,10 @@
 interface NeumorphCardProps {
   children?: React.ReactNode
   variant?: "flat" | "inset" | "convex" | "concave"
+  className?: string
 }
 
-export default function NeumorphCard({ children, variant = "flat" }: NeumorphCardProps) {
+export default function NeumorphCard({ children, variant = "flat", className }: NeumorphCardProps) {
   const neumorphVariant = {
     flat: "shadow-neumorph",
     inset: "shadow-neumorph-inset",
@@ -12,7 +13,7 @@ export default function NeumorphCard({ children, variant = "flat" }: NeumorphCar
   }
 
   return (
-    <section className={`rounded-xl ${neumorphVariant[variant]} py-8 px-4 flex flex-col justify-start items-start gap-4 overflow-y-auto h-full w-full custom-scroll`}>
+    <section className={`rounded-xl ${neumorphVariant[variant]} py-8 px-4 flex flex-col ${className}`}>
       {children}
     </section>
   )

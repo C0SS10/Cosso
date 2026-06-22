@@ -40,7 +40,7 @@ export default function About() {
           </figure>
           <h1 className="text-4xl font-heading cursor-default">Esteban Cossio</h1>
           <h2 className='text-2xl font-heading cursor-default'>Ingeniero de Sistemas</h2>
-          <p className="text-lg font-body text-center cursor-default">Desarrollador full-stack con experiencia en tecnologías web modernas.</p>
+          <p className="text-lg font-body text-center cursor-default">Desarrollador full-stack con experiencia en aseguramiento de la calidad.</p>
           <hr />
           <div className='flex justify-center items-center gap-4 shadow-neumorph p-2 rounded-full'>
             {Object.entries(socials).map(([key, { href, icon, popup }]) => (

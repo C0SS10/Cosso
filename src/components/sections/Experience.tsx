@@ -36,7 +36,7 @@ export default function Experience() {
     }
   ]
   return (
-    <section className="h-full row-span-2 cursor-default">
+    <section className="h-full row-span-2 cursor-default flex flex-col gap-4 justify-start items-center overflow-y-auto w-full custom-scroll">
       <NeumorphCard variant="inset">
         {experiences.map((expItem, index) => (
           <article key={index} className="flex flex-col gap-2 shadow-neumorph bg-neumorph-gradient rounded-lg p-2 w-full scroll-smooth">
